@@ -16,15 +16,15 @@ stages:
       ResultsPath: 'Publish'
       TestResultsFile: 'Q-Test-Pester.xml'
       Tag: 'Quality'
-  - template: JobTemplates\PesterTests.yml
-    parameters:
-      TestsPath: 'Tests'
-      ResultsPath: 'Publish'
-      TestResultsFile: 'U-Test-Pester.xml'
-      Tag: 'Unit'  
-  - template: JobTemplates\PesterTests.yml
-    parameters:
-      TestsPath: 'Tests'
-      ResultsPath: 'Publish'
-      TestResultsFile: 'A-Test-Pester.xml'
-      Tag: 'Acceptance'      
+  # - template: JobTemplates\PesterTests.yml
+  #   parameters:
+  #     TestsPath: 'Tests'
+  #     ResultsPath: 'Publish'
+  #     TestResultsFile: 'U-Test-Pester.xml'
+  #     Tag: 'Unit'  
+  # - template: JobTemplates\PesterTests.yml
+  #   parameters:
+  #     TestsPath: 'Tests'
+  #     ResultsPath: 'Publish'
+  #     TestResultsFile: 'A-Test-Pester.xml'
+  #     Tag: 'Acceptance'      
