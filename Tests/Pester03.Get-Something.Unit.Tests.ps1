@@ -13,7 +13,7 @@ Q001.Powershell.Help.Tests.ps1
 Import-Module ..\Resources\PowerShellScripts\DemoModule.psm1 -Force
 
 BeforeAll{
-    . $PSScriptRoot\Resources\PowerShellScripts\DemoModule.psm1
+    Import-Module ..\Resources\PowerShellScripts\DemoModule.psm1 -Force
 }
 Describe "Get-Something" -Tag "Unit" {
     Context "testing parameter ThingToGet" {
