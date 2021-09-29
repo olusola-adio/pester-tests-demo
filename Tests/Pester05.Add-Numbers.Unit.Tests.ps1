@@ -39,6 +39,7 @@ Describe "Add-Numbers" -Tag "Unit" {
     Context "when one parameter is used" {
         BeforeAll{
             $number1 = 4
+            Write-Host "setting number1 to $number1"
         }
         It "$number1 plus default(2) should return $($number1+2)" {
             Add-Numbers -number1 $number1 | Should -Be 6
@@ -54,6 +55,7 @@ Describe "Add-Numbers" -Tag "Unit" {
         BeforeAll{
             $number1 = 4
             $number2 = 4
+            Write-Host "setting number1 to $number1 and number2 to $number2"
         }
         It "$number1 plus $number2 should return $($number1+$number2)" {
             Add-Numbers -number1 $number1 -number2 $number2 | Should -Be 8
