@@ -3,9 +3,10 @@ parameters:
   ResultsPath: ''
   TestResultsFile: ''
   Tag: ''
+  JobName: ''
  
 jobs:
-- job: Pester
+- job: ${{ parameters.JobName }}
   displayName: Pester Code Quality Tests
   workspace:
       clean: all
