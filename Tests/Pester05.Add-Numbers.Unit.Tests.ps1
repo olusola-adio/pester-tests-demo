@@ -38,7 +38,9 @@ Describe "Add-Numbers" -Tag "Unit" {
 
     Context "when one parameter is used" {
         $number1 = 4
-
+        BeforeAll{
+            $number1 = 4
+        }
         It "$number1 plus default(2) should return $($number1+2)" {
             Add-Numbers -number1 $number1 | Should -Be 6
         }
