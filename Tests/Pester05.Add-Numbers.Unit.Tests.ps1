@@ -37,7 +37,6 @@ Describe "Add-Numbers" -Tag "Unit" {
     }
 
     Context "when one parameter is used" {
-        $number1 = 4
         BeforeAll{
             $number1 = 4
         }
@@ -51,9 +50,11 @@ Describe "Add-Numbers" -Tag "Unit" {
     }
 
     Context "when both parameters are used" {
-        $number1 = 4
-        $number2 = 4
 
+        BeforeAll{
+            $number1 = 4
+            $number2 = 4
+        }
         It "$number1 plus $number2 should return $($number1+$number2)" {
             Add-Numbers -number1 $number1 -number2 $number2 | Should -Be 8
         }
