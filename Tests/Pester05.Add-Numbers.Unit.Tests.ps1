@@ -37,6 +37,10 @@ Describe "Add-Numbers" -Tag "Unit" {
     }
 
     Context "when one parameter is used" {
+        BeforeDiscovery{
+            $number1 = 4
+            Write-Host "setting number1 to $number1"
+        }
         BeforeAll{
             $number1 = 4
             Write-Host "setting number1 to $number1"
@@ -51,7 +55,11 @@ Describe "Add-Numbers" -Tag "Unit" {
     }
 
     Context "when both parameters are used" {
-
+        BeforeDiscovery{
+            $number1 = 4
+            $number2 = 4
+            Write-Host "setting number1 to $number1 and number2 to $number2"
+        }
         BeforeAll{
             $number1 = 4
             $number2 = 4
