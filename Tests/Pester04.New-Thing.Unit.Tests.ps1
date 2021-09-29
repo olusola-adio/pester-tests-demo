@@ -13,6 +13,9 @@ BeforeDiscovery {
     Write-Host "BeforeDiscovery"
     Import-Module ..\Resources\PowerShellScripts\DemoModule.psm1 -Force
 }
+BeforeAll{
+    . $PSScriptRoot\Resources\PowerShellScripts\DemoModule.psm1
+}
 Describe "New-Thing" -Tag "Unit" {
     BeforeAll {
         Write-Host "BeforeAll"

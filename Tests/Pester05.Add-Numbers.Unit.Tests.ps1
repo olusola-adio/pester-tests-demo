@@ -12,6 +12,9 @@ Q001.Powershell.Help.Tests.ps1
 
 Import-Module ..\Resources\PowerShellScripts\DemoModule.psm1 -Force
 
+BeforeAll{
+    . $PSScriptRoot\Resources\PowerShellScripts\DemoModule.psm1
+}
 Describe "Add-Numbers" -Tag "Unit" {
     Context "testing parameters" {
         It "should have a parameter named number1" {
