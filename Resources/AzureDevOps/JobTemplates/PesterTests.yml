@@ -4,10 +4,11 @@ parameters:
   TestResultsFile: ''
   Tag: ''
   JobName: ''
+  JobDisplayName: ''
  
 jobs:
 - job: ${{ parameters.JobName }}
-  displayName: Pester Code Quality Tests
+  displayName: ${{ parameters.JobDisplayName }}s
   workspace:
       clean: all
   steps:

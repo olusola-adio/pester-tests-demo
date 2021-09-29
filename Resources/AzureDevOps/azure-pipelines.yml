@@ -17,6 +17,7 @@ stages:
       TestResultsFile: 'Q-Test-Pester.xml'
       Tag: 'Quality'
       JobName: 'QualityTests'
+      JobDisplayName: 'Pester Code Quality Test'
   - template: JobTemplates\PesterTests.yml
     parameters:
       TestsPath: 'Tests'
@@ -24,6 +25,7 @@ stages:
       TestResultsFile: 'U-Test-Pester.xml'
       Tag: 'Unit'  
       JobName: 'UnitTests'
+      JobDisplayName: 'Pester Unit Test'
   - template: JobTemplates\PesterTests.yml
     parameters:
       TestsPath: 'Tests'
@@ -31,3 +33,4 @@ stages:
       TestResultsFile: 'A-Test-Pester.xml'
       Tag: 'Acceptance'
       JobName: 'AccptanceTests'
+      JobDisplayName: 'Pester Acceptance Test'
