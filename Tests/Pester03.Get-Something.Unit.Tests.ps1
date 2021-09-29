@@ -12,9 +12,6 @@ Q001.Powershell.Help.Tests.ps1
 
 Import-Module ..\Resources\PowerShellScripts\DemoModule.psm1 -Force
 
-BeforeAll{
-    Import-Module ..\Resources\PowerShellScripts\DemoModule.psm1 -Force
-}
 Describe "Get-Something" -Tag "Unit" {
     Context "testing parameter ThingToGet" {
         It "should have a parameter named ThingToGet" {
