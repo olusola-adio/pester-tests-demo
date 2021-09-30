@@ -66,7 +66,7 @@ Describe "SubtractNumbers" -Tag "Unit" {
             Write-Host "setting number1 to $number1 and number2 to $number2"
         }
         It "$number1 minus $number2 should return $($number1-$number2)" {
-            SubtractNumbers -number1 $number1 -number2 $number2 | Should -Be $number1-$number2
+            SubtractNumbers -number1 $number1 -number2 $number2 | Should -Be $($number1-$number2)
         }
 
         It "$number1 minus $number2 should return an int" {

@@ -44,7 +44,7 @@ Describe "Acceptance Tests" -Tag "Acceptance" {
             @{ number1 = 1; number2 = 2; expected = 3 }
             @{ number1 = 1; number2 = 2; expected = 3 }
         ) {
-            Add-Numbers -number1 $number1 -number2 $number2 | Should -Be $expected
+            AddNumbers -number1 $number1 -number2 $number2 | Should -Be $expected
         }
     }
 
@@ -52,7 +52,7 @@ Describe "Acceptance Tests" -Tag "Acceptance" {
         It "number1 = <number1> Returns <expected>" -ForEach @(
             @{ number1 = 1; expected = 3 }
         ) {
-            Add-Numbers -number1 $number1 | Should -Be $expected
+            AddNumbers -number1 $number1 | Should -Be $expected
         }
     }
 }
