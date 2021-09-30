@@ -13,7 +13,7 @@ function New-Thing {
     "Thing"    
 }
 
-function Add-Numbers {
+function AddNumbers {
     [CmdletBinding()]
     param (
         [Parameter()]
@@ -25,4 +25,18 @@ function Add-Numbers {
     )
 
     $number1 + $number2
+}
+
+function SubtractNumbers {
+    [CmdletBinding()]
+    param (
+        [Parameter()]
+        [int]
+        $number1 = 0,
+        [Parameter()]
+        [int]
+        $number2 = 0
+    )
+
+    $number1 - $number2
 }

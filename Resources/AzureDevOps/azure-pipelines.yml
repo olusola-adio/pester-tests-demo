@@ -7,7 +7,7 @@ pr:
     - master
 
 stages:
-- stage: Build
+- stage: Test
   displayName: Test and Analyze
   jobs:
   - template: JobTemplates\PesterTests.yml
