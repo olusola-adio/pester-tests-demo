@@ -27,7 +27,7 @@ Describe "SubtractNumbers" -Tag "Unit" {
     }
 
     Context "when no parameters are used" {
-        It "should return 4" {
+        It "should return 0" {
             SubtractNumbers | Should -Be 0
         }
 
