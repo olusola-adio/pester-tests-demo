@@ -6,7 +6,7 @@ Runs the Code Quality tests
 Runs the Code Quality tests
 
 .EXAMPLE
-Q002.Powershell.Quality.Tests.ps1
+Pester02.Code.Quality.Tests.ps1
 
 #>
 

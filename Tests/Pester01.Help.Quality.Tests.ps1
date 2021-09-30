@@ -6,7 +6,7 @@ Runs the Help Quality tests
 Runs the Help Quality tests
 
 .EXAMPLE
-Q001.Powershell.Help.Tests.ps1
+Pester01.Help.Quality.Tests.ps1
 
 #>
 

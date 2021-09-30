@@ -20,8 +20,11 @@ Sets up the tests and runs them
 .PARAMETER Tag
 [Mandatory] Name of the Tag
 
+.PARAMETER Verbosity
+[Mandatory] Verbosity of the results
+
 .EXAMPLE
-Pester.ps1 -TestsPath $(System.DefaultWorkingDirectory)\${{ parameters.TestsPath }} -ResultsPath $(System.DefaultWorkingDirectory)\${{ parameters.ResultsPath }} -Publish -TestResultsFile ${{ parameters.TestResultsFile }}
+Pester.ps1 -TestsPath $(System.DefaultWorkingDirectory)\${{ parameters.TestsPath }} -ResultsPath $(System.DefaultWorkingDirectory)\${{ parameters.ResultsPath }} -Publish -TestResultsFile ${{ parameters.TestResultsFile }} -Tag 'Quality' -Verbosity 'Diagnostic'
 
 #>
 
@@ -44,7 +47,12 @@ param (
 
     [Parameter(Mandatory=$true)]
     [string]
-    $Tag
+    $Tag,
+
+    [Parameter(Mandatory=$false)]
+    [string]
+    $Verbosity = 'Detailed'
+
 )
 
 $pesterModule = Get-Module -Name Pester -ListAvailable | Where-Object {$_.Version -like '5.*'}
@@ -69,7 +77,7 @@ if ($Publish) {
     }
 }
 
-# Write-Host "Fetching tests:"
+# Write-Host "Fetching tests files"
 $Tests = (Get-ChildItem -Path $($TestsPath) -Recurse | Where-Object {$_.Name -like "*.Tests.ps1"}).FullName
 
 $Params = [ordered]@{
@@ -83,7 +91,7 @@ $Configuration = [PesterConfiguration]@{
         Container = $Container
     }
     Output       = @{
-        Verbosity = 'Diagnostic'
+        Verbosity = $Verbosity
     }
     Filter = @{
         Tag = $Tag

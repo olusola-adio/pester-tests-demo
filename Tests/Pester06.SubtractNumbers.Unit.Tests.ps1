@@ -1,12 +1,12 @@
 <#
 .SYNOPSIS
-Runs the Help Quality tests
+Runs the SubtractNumbers Unit tests
 
 .DESCRIPTION
-Runs the Help Quality tests
+Runs the SubtractNumbers Unit tests
 
 .EXAMPLE
-Q001.Powershell.Help.Tests.ps1
+Pester06.SubtractNumbers.Unit.Tests.ps1
 
 #>
 

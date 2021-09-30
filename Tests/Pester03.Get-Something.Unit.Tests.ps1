@@ -1,12 +1,12 @@
 <#
 .SYNOPSIS
-Runs the Help Quality tests
+Runs the Get-Something Unit tests
 
 .DESCRIPTION
-Runs the Help Quality tests
+Runs the Get-Something Unit tests
 
 .EXAMPLE
-Q001.Powershell.Help.Tests.ps1
+Pester03.Get-Something.Unit.Tests.ps1
 
 #>
 

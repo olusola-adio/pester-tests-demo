@@ -1,12 +1,12 @@
 <#
 .SYNOPSIS
-Runs the Help Quality tests
+Runs the New-Thing Unit tests
 
 .DESCRIPTION
-Runs the Help Quality tests
+Runs the New-Thing Unit tests
 
 .EXAMPLE
-Q001.Powershell.Help.Tests.ps1
+Pester04.New-Thing.Unit.Tests.ps1
 
 #>
 BeforeDiscovery {
