@@ -49,13 +49,13 @@ Describe "Addition Acceptance Tests" -Tag "Acceptance" {
     }
 
     Context "when both parameters are used" {
-        It "<number1> plus <number2> Returns <expected>" -ForEach @(
+        It "<number1> plus <number2> should Return <expected>" -ForEach @(
             @{ number1 = 1; number2 = 2; expected = 3 }
         ) {
             AddNumbers -number1 $number1 -number2 $number2 | Should -Be $expected
         }
 
-        It "<number1> plus <number2> Returns <expected>" -ForEach @($numbersBothParams) {
+        It "<number1> plus <number2> should Return <expected>" -ForEach @($numbersBothParams) {
             AddNumbers -number1 $number1 -number2 $number2 | Should -Be $expected
         }
 
