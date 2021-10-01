@@ -15,7 +15,7 @@ BeforeDiscovery {
     Import-Module ..\Resources\PowerShellScripts\DemoModule.psm1 -Force
 }
 
-Describe "Acceptance Tests" -Tag "Acceptance" {
+Describe "Addition Acceptance Tests" -Tag "Acceptance" {
 
     BeforeDiscovery {
         $numbersOneParam = @()
@@ -62,13 +62,13 @@ Describe "Acceptance Tests" -Tag "Acceptance" {
     }
 
     Context "when one parameter is used" {
-        It "number1 = <number1> Returns <expected>" -ForEach @(
+        It "number1 = <number1> should Return <expected>" -ForEach @(
             @{ number1 = 1; expected = 3 }
         ) {
             AddNumbers -number1 $number1 | Should -Be $expected
         }
 
-        It "number1 = <number1> Returns <expected>" -ForEach @($numbersOneParam) {
+        It "number1 = <number1> should Return <expected>" -ForEach @($numbersOneParam) {
             AddNumbers -number1 $number1 | Should -Be $expected
         }
     }

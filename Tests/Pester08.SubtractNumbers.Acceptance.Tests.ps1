@@ -15,7 +15,7 @@ BeforeDiscovery {
     Import-Module ..\Resources\PowerShellScripts\DemoModule.psm1 -Force
 }
 
-Describe "Acceptance Tests" -Tag "Acceptance" {
+Describe "Subtraction Acceptance Tests" -Tag "Acceptance" {
 
     BeforeDiscovery {
         $numbersOneParam = @()
@@ -49,26 +49,26 @@ Describe "Acceptance Tests" -Tag "Acceptance" {
     }
 
     Context "when both parameters are used" {
-        It "<number1> minus <number2> Returns <expected>" -ForEach @(
+        It "<number1> minus <number2> should return <expected>" -ForEach @(
             @{ number1 = 81; number2 = 2; expected = 79 }
         ) {
             SubtractNumbers -number1 $number1 -number2 $number2 | Should -Be $expected
         }
 
-        It "<number1> minus <number2> Returns <expected>" -ForEach @($numbersBothParams) {
+        It "<number1> minus <number2> should return <expected>" -ForEach @($numbersBothParams) {
             SubtractNumbers -number1 $number1 -number2 $number2 | Should -Be $expected
         }
 
     }
 
     Context "when one parameter is used" {
-        It "number1 = <number1> Returns <expected>" -ForEach @(
+        It "number1 = <number1> should return <expected>" -ForEach @(
             @{ number1 = 5; expected = 5 }
         ) {
             SubtractNumbers -number1 $number1 | Should -Be $expected
         }
 
-        It "number1 = <number1> Returns <expected>" -ForEach @($numbersOneParam) {
+        It "number1 = <number1> should return <expected>" -ForEach @($numbersOneParam) {
             SubtractNumbers -number1 $number1 | Should -Be $expected
         }
     }
