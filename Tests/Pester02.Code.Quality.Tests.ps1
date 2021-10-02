@@ -7,7 +7,6 @@ Runs the Code Quality tests
 
 .EXAMPLE
 Pester02.Code.Quality.Tests.ps1
-
 #>
 
 BeforeDiscovery {
