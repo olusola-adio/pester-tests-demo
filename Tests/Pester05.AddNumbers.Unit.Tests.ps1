@@ -39,11 +39,11 @@ Describe "AddNumbers" -Tag "Unit" {
     Context "when one parameter is used" {
         BeforeDiscovery{
             $number1 = 4
-            Write-Host "setting number1 to $number1"
+            Write-Output "setting number1 to $number1"
         }
         BeforeAll{
             $number1 = 4
-            Write-Host "setting number1 to $number1"
+            Write-Output "setting number1 to $number1"
         }
         It "$number1 plus default(2) should return $($number1+2)" {
             AddNumbers -number1 $number1 | Should -Be 6
@@ -58,12 +58,12 @@ Describe "AddNumbers" -Tag "Unit" {
         BeforeDiscovery{
             $number1 = 4
             $number2 = 4
-            Write-Host "setting number1 to $number1 and number2 to $number2"
+            Write-Output "setting number1 to $number1 and number2 to $number2"
         }
         BeforeAll{
             $number1 = 4
             $number2 = 4
-            Write-Host "setting number1 to $number1 and number2 to $number2"
+            Write-Output "setting number1 to $number1 and number2 to $number2"
         }
         It "$number1 plus $number2 should return $($number1+$number2)" {
             AddNumbers -number1 $number1 -number2 $number2 | Should -Be 8
