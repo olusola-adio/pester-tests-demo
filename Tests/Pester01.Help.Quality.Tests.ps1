@@ -12,7 +12,7 @@ Pester01.Help.Quality.Tests.ps1
 
 BeforeDiscovery {
     $Scripts = Get-ChildItem -Path $PSScriptRoot\..\*.ps1 -File -Recurse
-    Write-Host "File count discovered for Help quality Tests: $($Scripts.Count)"
+    Write-Host "Number of files discovered for Help quality Tests: $($Scripts.Count)"
 }
 Describe "Help quality tests for '<_>'" -ForEach @($Scripts) -Tag "Quality" {
 
