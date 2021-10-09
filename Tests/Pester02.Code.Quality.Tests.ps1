@@ -11,7 +11,9 @@ Pester02.Code.Quality.Tests.ps1
 #>
 
 BeforeDiscovery {
-    $files = Get-ChildItem -Path $PSScriptRoot\..\*.ps1 -File -Recurse
+    $files = New-Object System.Collections.Generic.List[System.Object]
+    $files += Get-ChildItem -Path $PSScriptRoot\..\*.psm1 -File -Recurse
+    $files += Get-ChildItem -Path $PSScriptRoot\..\*.ps1 -File -Recurse
     Write-Host "File count discovered for Code quality Tests: $($files.Count)"
 }
 Describe "Code quality tests" -ForEach @($files) -Tag "Quality" {
