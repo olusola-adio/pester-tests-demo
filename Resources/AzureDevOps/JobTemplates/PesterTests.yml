@@ -18,7 +18,11 @@ jobs:
     inputs:
       filePath: '$(System.DefaultWorkingDirectory)\Tests\Pester\Pester.ps1'
       workingDirectory: '$(System.DefaultWorkingDirectory)'
-      arguments: '-TestsPath $(System.DefaultWorkingDirectory)\${{ parameters.TestsPath }} -ResultsPath $(System.DefaultWorkingDirectory)\${{ parameters.ResultsPath }} -Publish -TestResultsFile ${{ parameters.TestResultsFile }} -Tag ${{ parameters.Tag }} -Verbosity ${{ parameters.Verbosity }}'
+      arguments: '-TestsPath $(System.DefaultWorkingDirectory)\${{ parameters.TestsPath }} 
+                  -ResultsPath $(System.DefaultWorkingDirectory)\${{ parameters.ResultsPath }} 
+                  -Publish -TestResultsFile ${{ parameters.TestResultsFile }} 
+                  -Tag ${{ parameters.Tag }} 
+                  -Verbosity ${{ parameters.Verbosity }}'
       errorActionPreference: 'silentlyContinue'
       ignoreLASTEXITCODE: true
 
