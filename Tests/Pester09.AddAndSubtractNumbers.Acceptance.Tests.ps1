@@ -19,7 +19,7 @@ Describe "Addition and Subtraction Acceptance Tests" -Tag "Acceptance" {
 
     BeforeDiscovery {
         $numbersAddAndSubtract = @()
-        for ($i = 1; $i -le 50; $i++) {
+        for ($i = 1; $i -le 100; $i++) {
             $input1 = 3 * ( $i + 1) + 3
             $input2 = $i + 37 - 2
             $answer1 = $($input1 + $input2)
@@ -32,7 +32,7 @@ Describe "Addition and Subtraction Acceptance Tests" -Tag "Acceptance" {
     }
     BeforeAll {
         $numbersAddAndSubtract = @()
-        for ($i = 1; $i -le 50; $i++) {
+        for ($i = 1; $i -le 100; $i++) {
             $input1 = 3 * ( $i + 1) + 3
             $input2 = $i + 37 - 2
             $answer1 = $($input1 + $input2)

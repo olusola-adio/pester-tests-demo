@@ -19,13 +19,13 @@ Describe "Addition Acceptance Tests" -Tag "Acceptance" {
 
     BeforeDiscovery {
         $numbersOneParam = @()
-        for ($i = 1; $i -le 50; $i++) {
+        for ($i = 1; $i -le 100; $i++) {
             $input1 = $i + $i + 1
             $answer = $($input1 + 2)
             $numbersOneParam += @{number1 = $input1; number2 = $input2; expected = $answer }
         }
         $numbersBothParams = @()
-        for ($i = 1; $i -le 50; $i++) {
+        for ($i = 1; $i -le 100; $i++) {
             $input1 = $i + $i + 1
             $input2 = $i + 37 - 2
             $answer = $($input1 + $input2)
@@ -34,13 +34,13 @@ Describe "Addition Acceptance Tests" -Tag "Acceptance" {
     }
     BeforeAll {
         $numbersOneParam = @()
-        for ($i = 1; $i -le 50; $i++) {
+        for ($i = 1; $i -le 100; $i++) {
             $input1 = $i + $i + 1
             $answer = $($input1 + 2)
             $numbersOneParam += @{number1 = $input1; number2 = $input2; expected = $answer }
         }
         $numbersBothParams = @()
-        for ($i = 1; $i -le 50; $i++) {
+        for ($i = 1; $i -le 100; $i++) {
             $input1 = $i + $i + 1
             $input2 = $i + 37 - 2
             $answer = $($input1 + $input2)
